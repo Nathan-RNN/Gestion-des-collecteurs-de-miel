@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "font1";
+    src: url(./assets/fonts/TiltPrism-Regular-VariableFont_XROT\,YROT.ttf);  
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+html,body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 21% 58% 21%;
+    box-shadow: 0 0 20px 4px #F7EFCB;
+}
+
+.fond{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.336),rgba(0, 0, 0, 0.144),rgba(0, 0, 0, 0.048),rgba(0, 0, 0, 0)),
+    url("assets/img/miel.jpg");
+    min-height: 100%;
+}
+
+.header-title{
+    color: rgb(253, 229, 9);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-family: 'font1',Verdana,Tahoma, sans-serif;
+    text-shadow: 4px 0px 6px rgb(0 0 0 / 48%);
+}
+
+main{
+    height: 100%;
+    background:#fdfad19d;
+    display: flex;
+}
+
+.container{
+    text-align: center;
+    align-self: center;
+    height: 100%;
+    background-color: #fdfad1;
+}
+
+.container-add{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container-title{
+    color: rgb(253, 229, 9);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.add{
+    display: grid;
+    width: 500px;
+    min-height: auto;
+    margin: 10px auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+        "lab1 inp1"
+        "lab3 inp3"
+        "lab4 inp4"
+        "lab5 inp5"
+        "sub sub"
+    ;
+    align-items: center;
+}
+
+input{
+    margin: 5px 0;
+    padding: 3px 10px ;
+    border-radius: 10px;
+    box-shadow: 1px 1px rgba(255, 255, 0, 0.219);
+}
+input:hover{
+    box-shadow: 1px 1px rgba(255, 255, 0, 0.363);
+}
+
+.lab1{
+    grid-area: lab1;
+}
+.lab2{
+    grid-area: lab2;
+}
+.lab3{
+    grid-area: lab3;
+}
+.lab4{
+    grid-area: lab4;
+}
+.lab5{
+    grid-area: lab5;
+}
+
+#nom{
+    grid-area: inp1;
+}
+#prenom{
+    grid-area: inp2;
+}
+#CIN{
+    grid-area: inp3;
+}
+#contact{
+    grid-area: inp4;
+}
+#commune{
+    grid-area: inp5;
+}
+.sub-container{
+    grid-area: sub;
+}
+
+button,#btn{
+    padding: .4rem;
+    border-radius: 10px;
+    background-color: rgb(253, 229, 9);
+    cursor: pointer;
+    border: 1px solid lightyellow;
+    color: whitesmoke;
+}
+button,#btn:hover{
+    background-color: green;
+    box-shadow: 0 0 20px 0px lightgreen;
+    border: 1px solid rgb(6, 190, 0);
+    color: white;
+}
+
+.information{
+    width: 500px;
+    flex: none;
+    min-height: auto;
+    margin: 10px auto;
+}
+
+#clear{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    background-color: yellow;
+    border: 1px solid lightyellow;
+}
+#clear:hover{
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
+
+#list{
+    list-style: none;
+}
+
+#list li{
+    margin: 10px 0;
+    align-items: center;
+    padding-left:10px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 85% 7.5% 7.5%;
+}
+
+#list li button:first-child{
+    background-color: yellow;
+    opacity: .7;
+    border: 1px solid lightyellow;
+}
+#list li button:first-child:hover{
+    background-color: yellow;
+    opacity: 1;
+    border: 1px solid white;
+}
+
+#list li button:last-child{
+    background-color: red;
+    opacity: .7;
+    border: 1px solid whitesmoke
+}
+#list li button:last-child:hover{
+    background-color: red;
+    opacity: 1;
+    border: 1px solid white;
+}
+
+.notif{
+    color: red;
+    margin-top:170px;
+}
+
+footer{
+    margin-top: auto;
+    background-color: white;
+    text-align: center;
+    font-style: italic;
+}
+

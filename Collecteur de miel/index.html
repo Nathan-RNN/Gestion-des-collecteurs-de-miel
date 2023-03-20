@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestion des collecteurs de miel</title>
+    <script defer src="js/arrayStorage.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo_ispm.png" alt="Logo ispm" class="ispm_logo">
+        <div class="fond">
+            <h1 class="header-title">Gestion des membres des collecteurs de miel dans la région Anôsy au sein du projet PIC</h1>
+        </div>
+        <img src="assets/img/logo-pic-web.png" alt="Logo PIC" class="pic_logo">
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="container-add">
+                <h2 class="container-title">Ajouter un membre:</h2>
+                <form class="add" name="remplissage">
+                    <label for="nom" class="lab1">Nom complet: </label>
+                    <input type="text" name="nom" class="input" id="nom" required>
+                    <!-- <label for="prenom" class="lab2">Prénom(s): </label>
+                    <input type="text" name="prenom" class="input" id="prenom" required> -->
+                    <label for="CIN" class="lab3">Numéro CIN: </label>
+                    <input type="number" name="numCIN" class="input" id="CIN" required min="0" max="999999999999" maxlength="12">
+                    <label for="contact" class="lab4">Conatct: </label>
+                    <input type="tel" name="telephone" class="input" id="contact" required>
+                    <label for="commune" class="lab5">Commune: </label>
+                    <input type="text" name="nom" class="input" id="commune" required>
+                    <div class="sub-container">
+                        <input type="submit" name="ajouter" id="btn" value="Ajouter">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="information" id="information">
+            <h2 class="container-title">Les listes et informations sur les membres ajoutés:</h2>
+            <ul id="list"></ul>
+            <button id="clear">Tout supprimer</button>
+        </div>
+    </main>
+
+    <footer>
+        <h4>Copyright &copy;2023-2024</h4>
+    </footer>
+</body>
+</html>
+
